@@ -1,43 +1,61 @@
-/* line 1, scss/main.scss */
+/*reset CSS*/
+
 * {
   padding: 0;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* line 7, scss/main.scss */
+/*common styles*/
+
 body {
   background-color: white;
   font-size: 36px;
+  font-family: 'Great Vibes', Arial, sans-serif cursive;
 }
 
-.raz {
-  font-size: 26px;
-  font-family: 'Lobster', cursive;
-  display: block;
-}
-.dwa {
-  font-size: 26px;
-  font-family: 'Pacifico', cursive;
-  display: block;
-}
-.trzy {
-  font-size: 26px;
-  font-family: 'Dancing Script', cursive;
-  display: block;
-}
-.cztery {
-  font-size: 26px;
-  font-family: 'Courgette', cursive;
-  display: block;
-}
-.piec {
-  font-size: px;
-  font-family: 'Great Vibes', cursive;
-  display: block;
+#main-container {
+  width: 960px;
+  height: 100vh; /*zakomentować*/
+  margin: 0 auto;
+  border-left: 3px double #ccc;
+  border-right: 3px double #ccc;
+  border-radius: 3%;
+  box-shadow: 0px 10px 50px #ccc;
 }
 
-/* line 9, scss/main.scss */
+.main-width {
+  /*width: 100%;*/
 
 
-/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5jc3MiLCJzb3VyY2VzIjpbIm1haW4uc2NzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIqe1xuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDAgYXV0bztcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbn1cblxuYm9keSB7XG4gIGJhY2tncm91bmQtY29sb3I6IHllbGxvdztcbiAgcHtcbiAgICBjb2xvcjogd2hpdGU7XG4gIH1cbn1cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsQUFBQSxDQUFDLENBQUE7RUFDQyxPQUFPLEVBQUUsQ0FBQztFQUNWLE1BQU0sRUFBRSxNQUFNO0VBQ2QsVUFBVSxFQUFFLFVBQVU7Q0FDdkI7OztBQUVELEFBQUEsSUFBSSxDQUFDO0VBQ0gsZ0JBQWdCLEVBQUUsTUFBTTtDQUl6Qjs7O0FBTEQsQUFFRSxJQUZFLENBRUYsQ0FBQyxDQUFBO0VBQ0MsS0FBSyxFQUFFLEtBQUs7Q0FDYiJ9 */
+}
+
+.main-width::after {
+  clear: both;
+  content: "";
+  display: block;
+
+}
+
+nav {
+  width: 960px;
+  height: 100px;
+  border: 1px solid red;
+  align-items: center;
+  border-radius: 20px 20px 10px 10px;
+  margin: 0 auto;
+}
+
+.menu-left, .menu-right {
+  border: 1px solid black;
+  width: 33%;
+  height: 100px;
+  float: left;
+}
+
+.nav-logo {
+  float: left;
+  width:34%;
+  border: 2px solid green;
+  height: 100px;
+}
