@@ -87,8 +87,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./main.scss");
+		module.hot.accept("!!../node_modules/css-loader/index.js!./main.css", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js!./main.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -116,7 +116,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  padding: 0;\n  margin: 0 auto;\n  box-sizing: border-box; }\n\nbody {\n  font-family: 'Open Sans', sans-serif; }\n\n.main-width {\n  width: 920px;\n  margin: 0 auto;\n  border: 1px solid green; }\n\n.main-width::after {\n  clear: both;\n  content: \"\";\n  display: block; }\n", ""]);
+exports.push([module.i, "/*reset CSS*/\n\n* {\n  padding: 0;\n  margin: 0 auto;\n  box-sizing: border-box;\n}\n\n/*common styles*/\n\nbody {\n  background-color: white;\n  font-size: 36px;\n  font-family: 'Great Vibes', Arial, sans-serif cursive;\n}\n\n#main-container {\n  width: 960px;\n  height: 100vh; /*zakomentować*/\n  margin: 0 auto;\n  border-left: 3px double #ccc;\n  border-right: 3px double #ccc;\n  border-radius: 3%;\n  box-shadow: 0px 10px 50px #ccc;\n}\n\n.main-width {\n  /*width: 100%;*/\n\n\n}\n\n.main-width::after {\n  clear: both;\n  content: \"\";\n  display: block;\n\n}\n\nnav {\n  width: 960px;\n  height: 100px;\n  margin: 0 auto;\n  align-items: center;\n  border-radius: 20px 20px 10px 10px;\n  /*border: 1px solid red;*/\n}\n\n.menu-left, .menu-right {\n  float: left;\n  width: 33%;\n  height: 100px;\n  /*border: 1px solid black;*/\n}\n\n.nav-logo {\n  float: left;\n  width:34%;\n  height: 100px;\n  /*border: 1px solid yellow;*/\n}\n\n#slider {\n  height: 400px;\n  /*border: 1px solid orange;*/\n}\n\n#images-show {\n  height: 150px;\n  /*border: 1px solid red;*/\n}\n\nfooter {\n  height: 100px;\n  /*border: 1px solid purple;*/\n\n}\n", ""]);
 
 // exports
 
