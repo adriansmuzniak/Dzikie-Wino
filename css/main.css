@@ -16,12 +16,12 @@ body {
 
 #main-container {
   width: 960px;
-  /*height: 100vh; /*zakomentować*/*/
+  height: 100vh; /*zakomentować*/
   margin: 0 auto;
   border-left: 3px double #ccc;
   border-right: 3px double #ccc;
   border-radius: 3%;
-  box-shadow: 0px 10px 50px #ccc;
+  box-shadow: 0px 10px 30px #69333E;
 }
 
 .main-width {
@@ -38,7 +38,7 @@ body {
 }
 
 nav {
-  width: 960px;
+  width: 955px;
   /*height: 100px;*/
   margin: 0 auto;
   align-items: center;
@@ -47,25 +47,37 @@ nav {
 }
 
 .menu-left {
-  padding-top: 25px;
-  padding-left: 20px;
+  padding-top: 45px;
+  padding-left: 35px;
   /*padding-right: 15px;*/
   float: left;
   width: 41%;
-  height: 100px;
+  height: 145px;
   /*border: 1px solid black;*/
   /*margin-left: 5px;*/
+  border-bottom: 3px double lightgrey;
+  border-radius: 25px 0px 0px 25px;
+  box-shadow: -7px 2px 10px #47000E;
 }
 
+/*.menu-left::after{
+  display: block;
+  content: "";
+  color: green;
+}*/
+
 .menu-right {
-  padding-top: 25px;
+  padding-top: 45px;
   /*padding-left: 15px;*/
   padding-right: 10px;
   float: right;
   width: 41%;
-  height: 100px;
+  height: 145px;
   /*border: 1px solid black;*/
   /*margin-right: 10px;*/
+  border-bottom: 3px double lightgrey;
+  border-radius: 0px 25px 25px 0px;
+  box-shadow: 7px 2px 10px #47000E;
 }
 
 
@@ -94,36 +106,46 @@ footer {
 }
 
 #logo {
-  width: 120px;
+  width: 140px;
   margin: 5px;
   /*border: 1px solid red;*/
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 10%;
-  box-shadow: 0px 5px 20px #47000E;
+  border-radius: 2%;
+  box-shadow: 3px 5px 5px #47000E;
 }
 
 .menu-list li{
+  cursor: pointer;
   font-family: 'Great Vibes', Arial;
-  width: 120px;
-  height: 40px;
+  width: 110px;
+  height: 45px;
   font-size: 24px;
   float: left;
   list-style-type: none;
   display: inline-block;
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 3px;
   padding-top: 7px;
   text-align: center;
   /*border: 1px solid red;*/
   letter-spacing: 2px;
-  background-color: white;
+  /*background-color: white;*/
   color: #47000E;
-  border-radius: 20px 10px 20px 10px;
+  /*color: white;*/
+  border-radius: 10px 10px 10px 10px;
   box-shadow: 3px 3px 10px #47000E;
-  border: 1px solid #47000E;
+  border: 3px double saddlebrown;
+  background: rgba(255,255,255,1);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 35%, rgba(230,184,193,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(35%, rgba(246,246,246,1)), color-stop(100%, rgba(230,184,193,1)));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 35%, rgba(230,184,193,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 35%, rgba(230,184,193,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 35%, rgba(230,184,193,1) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 35%, rgba(230,184,193,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6b8c1', GradientType=0 );
 }
