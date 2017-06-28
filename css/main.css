@@ -228,43 +228,48 @@ nav {
 
 .div-color-section {
 
-  left: 20px;
+  left: 5px;
   position: relative;
 }
 
 .div-color1:hover, .div-color3:hover {
   transform: skewX(-0deg);
-  width: 25%;
-  /*transform: scale(1.2);*/
+  width: 26%;
+  transform: scale(1.2);
+
   top: 0px;
-  border-radius: 3%;
+  border-radius: 1%;
   box-shadow: 6px 6px 10px #47000E;
   /*z-index: 3:*/
-  border: 3px double wheat;
+  border: 1px double wheat;
   background-color: white;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .div-color2:hover, .div-color4:hover {
   transform: skewX(-0deg);
-  width: 25%;
-  /*transform: scale(1.2);*/
+  width: 26%;
+  transform: scale(1.2);
   top: -30px;
-  border-radius: 3%;
+  border-radius: 1%;
   box-shadow: 10px 10px 30px #47000E;
   /*z-index: 2;*/
   border: 1px double wheat;
   background-color: white;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .div-color1 {
   /*background-color: red;*/
-  width: 23%;
-  height: 200px;
+  width: 24%;
+  height: 170px;
   margin-top: 50px;
   margin-left: 12px;
   position: relative;
   top: -30px;
-  /*margin-right: 12px;*/
+  margin-right: -6px;
   float: left;
   transform: skewX(-7deg);
   margin-bottom: 30px;
@@ -277,8 +282,8 @@ nav {
 
 .div-color2 {
   /*background-color: green;*/
-  width: 23%;
-  height: 200px;
+  width: 24%;
+  height: 170px;
   margin-top: 50px;
   position: relative;
   top: 0px;
@@ -293,8 +298,8 @@ nav {
 }
 .div-color3 {
   /*background-color: blue;*/
-  width: 23%;
-  height: 200px;
+  width: 24%;
+  height: 170px;
   margin-top: 50px;
   position: relative;
   /*margin-left: 12px;*/
@@ -310,11 +315,11 @@ nav {
 }
 .div-color4 {
   /*background-color: yellow;*/
-  width: 23%;
-  height: 200px;
+  width: 24%;
+  height: 170px;
   margin-top: 50px;
   position: relative;
-  /*margin-left: 12px;*/
+  margin-left: -6px;
   /*margin-right: 12px;*/
   float: left;
   transform: skewX(-7deg);
@@ -337,10 +342,10 @@ nav {
   left: 50%;*/
   /*transform: translate(-50%, -50%);*/
   /*transform: skewX(7deg);*/
-  width: 95%;
-  height: 80%;
-  left: 7px;
-  top: 20px;
+  width: 99%;
+  height: 99%;
+  left: 1px;
+  /*top: 20px;*/
   box-shadow: 6px 6px 40px #47000E;
   transition: 0.3s;
 
@@ -348,4 +353,5 @@ nav {
 
 .div-color-section img:hover {
   box-shadow: 0px 0px 0px #fff;
+  opacity: 0.9;
 }
