@@ -223,7 +223,7 @@ nav {
   width: 700px;
   height: 370px;
   /*border: 10px solid wheat;*/
-  padding: 1px;
+  /*padding: 1px;*/
 
 }
 
@@ -371,6 +371,7 @@ nav {
 .background {
   float: left;
   width: 103%;
+  height: 375px;
   left: -15px;
   position: relative;
   /*height: 300px;*/
