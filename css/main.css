@@ -52,11 +52,13 @@ nav {
 }
 
 .menu-left {
+  position: relative;
+  right: 15px;
   padding-top: 20px;
   padding-left: 10px;
   /*padding-right: 15px;*/
   float: left;
-  width: 41%;
+  width: 42%;
   height: 100px;
   /*border: 1px solid black;*/
   /*margin-left: 5px;*/
@@ -73,11 +75,13 @@ nav {
 }*/
 
 .menu-right {
+  position: relative;
+  left: 15px;
   padding-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
   float: right;
-  width: 41%;
+  width: 42%;
   height: 100px;
   /*border: 1px solid black;*/
   /*margin-right: 10px;*/
@@ -89,7 +93,7 @@ nav {
 
 .nav-logo {
   float: left;
-  width:18%;
+  width:16%;
   /*height: 100px;*/
   /*border: 1px solid yellow;*/
   background-color: floralwhite;
@@ -99,7 +103,8 @@ nav {
 }
 
 #logo {
-  width: 180px;
+  height: 170px;
+  width: 190px;
   /*margin: 5px;*/
   /*border: 1px solid red;*/
   position: relative;
@@ -151,15 +156,37 @@ nav {
   transition: 0.2s;
 }
 
+.menu-list a:link {
+  text-decoration: none;
+  color: darkgoldenrod;
+}
+
+.menu-list a:visited {
+  text-decoration: none;
+  color: #47000E;
+}
+
 .menu-list li:hover{
   box-shadow: 7px 7px 10px #47000E;
   /*width: 115px;*/
   /*height: 50px;*/
   transform: translateX(-3%);
-  color: darkred;
+  color: darkgoldenrod;
   border-radius: 13px 13px 13px 13px;
   border: 3px double darkgoldenrod;
 }
+
+.menu-list li:active{
+  color: darkgoldenrod;
+  /*width: 105px;*/
+  /*height: 40px;*/
+  top: 3px;
+  left: 5px;
+  position: relative;
+  box-shadow: 2px 2px 5px #47000E;
+  text-decoration: none;
+}
+
 
 #slider {
   width: 700px;
@@ -348,7 +375,9 @@ nav {
 
 .background {
   float: left;
-  width: 100%;
+  width: 103%;
+  left: -15px;
+  position: relative;
   /*height: 300px;*/
   border-top: 3px double lightgrey;
   border-bottom: 3px double lightgrey;
@@ -386,6 +415,8 @@ nav {
 
 }
 
+
+
 .span-headers {
   font-family: 'Great Vibes', Arial, sans-serif;
   font-size: 40px;
@@ -412,6 +443,10 @@ nav {
   margin-bottom: 30px;
   font-size: 34px;
 
+
+}
+.span-text .Socha {
+  font-size: 42px;
 }
 
 #images-show {
