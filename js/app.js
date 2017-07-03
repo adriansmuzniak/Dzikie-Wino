@@ -6,18 +6,19 @@ console.log();
 
 $(".background").hover(
   function(){
-    $(".section-button").stop(true, true).fadeOut(500, "swing" );
-    $(".background").stop(true, true).animate({"opacity": "0.9", "height": "-=150px"},700);
-    // $(".span-text").stop().fadeOut(1000);
+    // $(".section-button").stop(true, true).fadeOut(500, "swing" );
+    $(".span-text").fadeOut(100);
+    $(".background").animate({"opacity": "0.9", "height": "-=225px", "width": "-=450px"},1000).animate({"position": "relative","left": "22%"},500);
   },
   function(){
-    // $(".span-text").stop().fadeIn(1000);
-    $(".background").stop(true, true).animate({"opacity": "1", "height": "+=150px"},300);
-    $(".section-button").stop(true, true).fadeIn(700, "swing");
+    $(".span-text").fadeIn(1300);
+    $(".background").animate({"position": "relative","left": "-1%"},500).animate({"opacity": "1", "height": "+=225px", "width": "+=450px"},300);
+
+    // $(".section-button").stop(true, true).fadeIn(700, "swing");
 
   }
 )
-
+// -------------------------------------------------------------------------------
 $("#slider").hover(
   function(){
     $("#logo").stop(true,true).animate({"height": "155px", "width": "170px","opacity": "0.2"},1);

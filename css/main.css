@@ -491,3 +491,68 @@ nav {
   position: relative;
   left: -25px;
 }
+
+#about{
+  text-align: center;
+  margin-top: 50px;
+  height: 450px;
+}
+
+#about .section-button{
+  height: 100%;
+  padding-top: 12px;
+  margin-bottom: 40px;
+  height: 50px;
+  width: 234px;
+}
+
+.about.text-section{
+  text-align: justify;
+  font-size: 20px;
+  display: block;
+  float: left;
+  width: 430px;
+  height: 300px;
+  position: relative;
+  left: 5%;
+  margin-left: 20px;
+}
+
+.about.photo {
+  display: block;
+  float: left;
+  width: 250px;
+  height: 300px;
+  position: relative;
+  left: 15%;
+}
+
+.about.photo img{
+
+  width: 250px;
+  height: 300px;
+}
+
+.slider-prev {
+  position: relative;
+  top: 170px;
+  left: 40px;
+}
+
+.slider-next {
+  text-align: center;
+  position: relative;
+  top: 170px;
+  left: 860px;
+  top: 170px;
+  width: 40px;
+  display: inline-block;
+  padding-left: 3px;
+  padding-top: 2px;
+  font-size: 35px;
+  background-color: lightgrey;
+  border-radius: 20%;
+  box-shadow: 2px 2px 5px darkgoldenrod;
+  font-weight: bold;
+
+}
