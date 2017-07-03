@@ -43,7 +43,7 @@ body {
 
 nav {
   width: 955px;
-  height: 145px;
+  height: 110px;
   margin: 0 auto;
   align-items: center;
   border-radius: 20px 20px 10px 10px;
@@ -534,25 +534,45 @@ nav {
 }
 
 .slider-prev {
+  float: left;
   position: relative;
   top: 170px;
-  left: 40px;
-}
-
-.slider-next {
-  text-align: center;
-  position: relative;
-  top: 170px;
-  left: 860px;
-  top: 170px;
+  left: -525px;
   width: 40px;
+  text-align: center;
   display: inline-block;
-  padding-left: 3px;
+  /*padding-right: 3px;*/
   padding-top: 2px;
   font-size: 35px;
   background-color: lightgrey;
   border-radius: 20%;
-  box-shadow: 2px 2px 5px darkgoldenrod;
+  box-shadow: 1px 1px 5px darkgoldenrod;
   font-weight: bold;
+  opacity: 0.8;
+  border: 1px solid darkgrey;
+  color: #47000E;
+}
 
+.slider-prev:hover{
+  width: 45px;
+}
+
+.slider-next {
+  float: left;
+  color: #47000E;
+  position: relative;
+  top: 170px;
+  left: 285px;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+  /*padding-left: 3px;*/
+  padding-top: 2px;
+  font-size: 35px;
+  background-color: lightgrey;
+  border-radius: 20%;
+  box-shadow: 1px 1px 5px darkgoldenrod;
+  font-weight: bold;
+  border: 1px solid darkgrey;
+  opacity: 0.8;
 }
