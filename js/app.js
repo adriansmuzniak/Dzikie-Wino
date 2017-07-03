@@ -18,6 +18,26 @@ $(".background").hover(
 
   }
 )
+//----------------------------------------------------
+$(".slider-prev").hover(
+  function(){
+    $(this).animate({"left": "-=5px",},100);
+  },
+  function(){
+    $(this).animate({"left": "+=5px",},100);
+  }
+)
+
+// ---------------------------------------------------------
+$(".slider-next").hover(
+  function(){
+    $(this).animate({"left": "+=5px",},100);
+  },
+  function(){
+    $(this).animate({"left": "-=5px",},100);
+  }
+)
+
 // -------------------------------------------------------------------------------
 $("#slider").hover(
   function(){

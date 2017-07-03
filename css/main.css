@@ -543,18 +543,22 @@ nav {
   display: inline-block;
   /*padding-right: 3px;*/
   padding-top: 2px;
-  font-size: 35px;
+  font-size: 32px;
   background-color: lightgrey;
   border-radius: 20%;
-  box-shadow: 1px 1px 5px darkgoldenrod;
+  box-shadow: 1px 1px 2px darkgoldenrod;
   font-weight: bold;
   opacity: 0.8;
   border: 1px solid darkgrey;
-  color: #47000E;
+  color: #69333E;
 }
 
-.slider-prev:hover{
-  width: 45px;
+.slider-prev:hover, .slider-next:hover{
+  opacity: 1;
+  box-shadow: 2px 2px 4px darkgoldenrod;
+  border: 1px solid #47000E;
+  /*font-size: 28px;*/
+  border-radius: 25%;
 }
 
 .slider-next {
@@ -562,13 +566,13 @@ nav {
   color: #47000E;
   position: relative;
   top: 170px;
-  left: 285px;
+  left: 290px;
   width: 40px;
   text-align: center;
   display: inline-block;
   /*padding-left: 3px;*/
   padding-top: 2px;
-  font-size: 35px;
+  font-size: 32px;
   background-color: lightgrey;
   border-radius: 20%;
   box-shadow: 1px 1px 5px darkgoldenrod;
