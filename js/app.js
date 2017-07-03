@@ -11,7 +11,7 @@ $(".background").hover(
     $(".background").animate({"opacity": "0.9", "height": "-=225px", "width": "-=450px"},1000).animate({"position": "relative","left": "22%"},500);
   },
   function(){
-    $(".span-text").fadeIn(1300);
+    $(".span-text").fadeIn(4000);
     $(".background").animate({"position": "relative","left": "-1%"},500).animate({"opacity": "1", "height": "+=225px", "width": "+=450px"},300);
 
     // $(".section-button").stop(true, true).fadeIn(700, "swing");
@@ -21,24 +21,24 @@ $(".background").hover(
 //----------------------------------------------------
 $(".slider-prev").hover(
   function(){
-    $(this).animate({"left": "-=5px",},100);
+    $(this).finish().animate({"left": "-=10px"},100);
   },
   function(){
-    $(this).animate({"left": "+=5px",},100);
+    $(this).finish().animate({"left": "+=10px"},100);
   }
 )
 
 // ---------------------------------------------------------
 $(".slider-next").hover(
   function(){
-    $(this).animate({"left": "+=5px",},100);
+    $(this).animate({"left": "+=10px",},100);
   },
   function(){
-    $(this).animate({"left": "-=5px",},100);
+    $(this).animate({"left": "-=10px",},100);
   }
 )
 
-// -------------------------------------------------------------------------------
+// ----------------------------LOGO---------------------------------------------------
 $("#slider").hover(
   function(){
     $("#logo").stop(true,true).animate({"height": "155px", "width": "170px","opacity": "0.2"},1);
