@@ -1,24 +1,10 @@
-require("../css/main.css");
+// require("../css/main.css");
 document.addEventListener("DOMContentLoaded", function(){
 
-var span = $(".span-headers");
-console.log();
 
-$(".background").hover(
-  function(){
-    // $(".section-button").stop(true, true).fadeOut(500, "swing" );
-    $(".span-text").fadeOut(100);
-    $(".background").animate({"opacity": "0.9", "height": "-=225px", "width": "-=450px"},1000).animate({"position": "relative","left": "22%"},500);
-  },
-  function(){
-    $(".span-text").fadeIn(4000);
-    $(".background").animate({"position": "relative","left": "-1%"},500).animate({"opacity": "1", "height": "+=225px", "width": "+=450px"},300);
 
-    // $(".section-button").stop(true, true).fadeIn(700, "swing");
 
-  }
-)
-//----------------------------------------------------
+//-----------------Button prev-------------------------------
 $(".slider-prev").hover(
   function(){
     $(this).finish().animate({"left": "-=10px"},100);
@@ -28,7 +14,7 @@ $(".slider-prev").hover(
   }
 )
 
-// ---------------------------------------------------------
+// ---------------Button next------------------------------------------
 $(".slider-next").hover(
   function(){
     $(this).animate({"left": "+=10px",},100);
@@ -88,4 +74,24 @@ $(function(){
   $slider.on("mouseenter", pauseSlider).on("mouseleave", startSlider);
 
   })
+
+// logo - fading, resizing
+
+var span = $(".span-headers");
+console.log();
+
+$(".background").hover(
+  function(){
+    // $(".section-button").stop(true, true).fadeOut(500, "swing" );
+    $(".span-text").fadeOut(100);
+    $(".background").animate({"opacity": "0.9", "height": "-=225px", "width": "-=450px"},1000).animate({"position": "relative","left": "22%"},500);
+  },
+  function(){
+    $(".span-text").fadeIn(4000);
+    $(".background").animate({"position": "relative","left": "-1%"},500).animate({"opacity": "1", "height": "+=225px", "width": "+=450px"},300);
+
+    // $(".section-button").stop(true, true).fadeIn(700, "swing");
+
+  }
+)
 });
