@@ -42,6 +42,7 @@ $("#slider").hover(
 
 // ----------------------------------------------------------------
 
+$(function(){
 // configuration
  var width = 700; //szerokość
  var animationSpeed = 500; //szybkość animacji - 1s
@@ -55,7 +56,6 @@ $("#slider").hover(
 
  var interval; // interval na zewnątrz - scope
 
- $(function(){
  function startSlider(){
    interval = setInterval(function(){
      $slideContainer.animate({"margin-left": "-="+ width},  animationSpeed, function() {
@@ -75,18 +75,21 @@ $("#slider").hover(
 
 //start po najechaniu
   startSlider(); //wywołanie funkcji
+
   $slider.on("mouseenter", pauseSlider).on("mouseleave", startSlider);
+
+  $(".slider-next").on("click", function(){
+    $slideContainer.animate({"margin-left": "-=700px"});
+
+  $(".slider-prev").on("click", function(){
+    $slideContainer.animate({"margin-left": "+=700px"});
+    });
+  });
 })
 
 //slider buttons
 
-$(".slider-next").on("click", function(){
-  $slideContainer.animate({"margin-left": "-=700px"});
-});
 
-$(".slider-prev").on("click", function(){
-  $slideContainer.animate({"margin-left": "+=700px"});
-});
 
 
 // logo - fading, resizing
