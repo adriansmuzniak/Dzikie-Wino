@@ -2,6 +2,8 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 
+  // action after click
+
 
 
 //-----------------Button prev-------------------------------
@@ -23,6 +25,11 @@ $(".slider-next").hover(
     $(this).animate({"left": "-=10px",},100);
   }
 )
+
+$(".slider-next").on("click", function(){
+console.log("co jest");
+});
+
 
 // ----------------------------LOGO---------------------------------------------------
 $("#slider").hover(
