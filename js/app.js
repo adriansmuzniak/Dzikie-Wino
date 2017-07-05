@@ -78,7 +78,6 @@ $(function(){
   $slider.on("mouseenter", pauseSlider).on("mouseleave", startSlider);
 })
 
-
 // -----------------------test------------------------------
   $(".slider-next").on("click", function(){
     $slideContainer.animate({"margin-left": "-=700px"});
@@ -92,7 +91,7 @@ $(function(){
 $(function(){
 
   // cacheDOM when clicked
-  var changeOnClick = 700; //skok buttona w prawo
+  var changeOnClick = 700; // rigth button action when clicked
   var currentClickSlide = 1;
   var speedOfAnimationWhenClicked = 300;
   var $slider = $("#slider"); //div w którym jest slider
@@ -101,9 +100,20 @@ $(function(){
 
 //slider buttons
 
+function actionOnCLick(){
+  $(".slider-next").on("click", function(){
+    $slideContainer.animate({"margin-left": "+=" + changeOnClick}, speedOfAnimationWhenClicked, function(){
+      currentClickSlide ++;
+      if (currentSlide === $slides.length) {
+        currentSlide = 1;
+      }
+    })
+  })
+}
 
 
 
+// ---------------------------------------------------------------------------
 // logo - fading, resizing
 
 var span = $(".span-headers");
