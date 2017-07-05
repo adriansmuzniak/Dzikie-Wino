@@ -86,7 +86,8 @@ $(function(){
     $slideContainer.animate({"margin-left": "+=700px"});
     });
   });
-})
+
+
 
 $(function(){
 
@@ -99,20 +100,25 @@ $(function(){
   var $slides = $slideContainer.find(".slide"); // li
 
 //slider buttons
-
+//do poprawy!
 function actionOnCLick(){
-    $slideContainer.animate({"margin-left": "+=" + changeOnClick}, speedOfAnimationWhenClicked, function(){
-      currentClickSlide ++;
-      if (currentSlide === $slides.length) {
-        currentSlide = 1;
-        $slideContainer.css("margin-left", 0);
-      }
-    });
+    var action = clickNext(function(){
+
+      $slideContainer.animate({"margin-left": "+=" + changeOnClick}, speedOfAnimationWhenClicked, function(){
+        currentClickSlide ++;
+        if (currentSlide === $slides.length) {
+          currentSlide = 1;
+          $slideContainer.css("margin-left", 0);
+        }
+      })
+    }, pause);
+    console.log("cos");
   }
 
-actionOnCLick();
-$(".slider-next").on("click", actionOnCLick);
+  actionOnCLick();
+  $(".slider-next").on("click", actionOnCLick);
 
+})
 
 // ---------------------------------------------------------------------------
 // logo - fading, resizing
@@ -132,6 +138,5 @@ $(".background").hover(
 
     // $(".section-button").stop(true, true).fadeIn(700, "swing");
 
-  }
-)
+  })
 });
