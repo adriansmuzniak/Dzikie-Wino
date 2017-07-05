@@ -101,16 +101,17 @@ $(function(){
 //slider buttons
 
 function actionOnCLick(){
-  $(".slider-next").on("click", function(){
     $slideContainer.animate({"margin-left": "+=" + changeOnClick}, speedOfAnimationWhenClicked, function(){
       currentClickSlide ++;
       if (currentSlide === $slides.length) {
         currentSlide = 1;
+        $slideContainer.css("margin-left", 0);
       }
-    })
-  })
-}
+    });
+  }
 
+actionOnCLick();
+$(".slider-next").on("click", actionOnCLick);
 
 
 // ---------------------------------------------------------------------------
