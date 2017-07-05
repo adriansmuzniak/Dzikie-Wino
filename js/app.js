@@ -75,9 +75,11 @@ $(function(){
 
 //start po najechaniu
   startSlider(); //wywołanie funkcji
-
   $slider.on("mouseenter", pauseSlider).on("mouseleave", startSlider);
+})
 
+
+// -----------------------test------------------------------
   $(".slider-next").on("click", function(){
     $slideContainer.animate({"margin-left": "-=700px"});
 
@@ -86,6 +88,16 @@ $(function(){
     });
   });
 })
+
+$(function(){
+
+  // cacheDOM when clicked
+  var changeOnClick = 700; //skok buttona w prawo
+  var currentClickSlide = 1;
+  var speedOfAnimationWhenClicked = 300;
+  var $slider = $("#slider"); //div w którym jest slider
+  var $slideContainer = $slider.find(".slides"); // ul
+  var $slides = $slideContainer.find(".slide"); // li
 
 //slider buttons
 
