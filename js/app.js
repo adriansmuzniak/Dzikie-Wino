@@ -80,61 +80,44 @@ $(function(){
 
 // -----------------------test------------------------------
 
-  // var index = 1;
-  //
-  // function indexPlus(n) {
-  //     index = index + n;
-  //     showImage(index);
-  // }
-  //
-  // showImage(1);
-  //
-  // function showImage(n){
-  //
-  // }
+  var index = 1;
+
+  function indexPlus(n) {
+      index = index + n;
+      showImage(index);
+  }
 
 
+  function showImage(n){
+    var i;
+    var x = document.getElementsByClassName("slide");
+    if (n>x.length) {
+      index = x.length
+    };
+    if (n < 1) {
+      index = x.length
+    };
+    for (i=0; i<x.length; i++){
+      x[i].style.display = "none";
+    }
+    x[index-1].style.display = "block";
+  }
 
+  showImage(1);
 
+    $(".slider-next").on("click", showImage(1){
+      var $slider = $("#slider"); //div w którym jest slider
+      var $slideContainer = $slider.find(".slides"); // ul
+      var $slides = $slideContainer.find(".slide"); // li
+      $slideContainer.animate({"margin-left": "-=700"}, 300),
+    }
 
-  // $(".slider-next").on("click", function(){
-  //   var currentClickSlide = 1;
-  //     var $slider = $("#slider"); //div w którym jest slider
-  //     var $slideContainer = $slider.find(".slides"); // ul
-  //     var $slides = $slideContainer.find(".slide"); // li
-  //
-  //     $slideContainer.animate({"margin-left": "-=700"}, 300);
-  //
-  //     // currentClickSlide++;
-  //     // console.log(currentClickSlide);
-  //     // if (currentClickSlide === 3) {
-  //     //   currentClickSlide = 1;
-  //     //   $slideContainer.css("margin-left", 0);
-  //     // }
-  //   })
-
-    $(".slider-next").on("click", function(){
-        var currentClickSlide = 1;
-        var $slider = $("#slider"); //div w którym jest slider
-        var $slideContainer = $slider.find(".slides"); // ul
-        var $slides = $slideContainer.find(".slide"); // li
-
-        $slideContainer.animate({"margin-left": "+=700"}, 300);
-
-        for (var i=0; i<$slideContainer.length-1; i++){
-          currentClickSlide++;
-          if (currentClickSlide == $slideContainer.length){
-            currentClickSlide = 1;
-            $slideContainer.css("margin-left", 0);
-          }
-        }
-        // currentClickSlide++;
-        // console.log(currentClickSlide);
-        // if (currentClickSlide === 3) {
-        //   currentClickSlide = 1;
-        //   $slideContainer.css("margin-left", 0);
-        // }
-      })
+    $(".slider-prev").on("click", showImage(-1){
+      var $slider = $("#slider"); //div w którym jest slider
+      var $slideContainer = $slider.find(".slides"); // ul
+      var $slides = $slideContainer.find(".slide"); // li
+      $slideContainer.animate({"margin-left": "-=700"}, 300),
+    }
 
 // ---------------------------------------------------------------------------
 // logo - fading, resizing
