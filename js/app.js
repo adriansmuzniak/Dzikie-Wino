@@ -75,6 +75,8 @@ $("#slider").hover(
  //
 
 $(".slider-next").on("click", function(){
+  var cos = $(".slides").find("img");
+  console.log(cos.length);
   var currentImage = $(".active");
   var nextImage = currentImage.next();
   if(nextImage.length){
@@ -93,7 +95,9 @@ $(".slider-prev").on("click", function(){
 })
 
 
-  // ---------------------------------------------------------------------------
+
+
+  // -------------------------------------------------------------------
 // logo - fading, resizing
 
 var span = $(".span-headers");
