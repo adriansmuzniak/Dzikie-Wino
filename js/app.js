@@ -81,18 +81,7 @@ $(function(){
 // -----------------------test------------------------------
  //
 
- var counter = 0;
- $(".slider-next").on("click", function(){
-   var $slider = $("#slider"); //div w którym jest slider
-   var $slideContainer = $slider.find(".slides"); // ul
-   var $slides = $slideContainer.find(".slide"); // li
 
-   $($slideContainer).animate({"margin-left": "-=700px"},500)
-    if ($slideContainer.css("margin-left") == "4200px"){
-      $slideContainer.css("margin-left", 0);
-      console.log("jebaj");
-    }
- })
 
   // ---------------------------------------------------------------------------
 // logo - fading, resizing
