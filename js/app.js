@@ -79,46 +79,29 @@ $(function(){
 })
 
 // -----------------------test------------------------------
+  // $(".slider-next").on("click", function(){
+  //   $slideContainer.animate({"margin-left": "-=700px"});
+  //
+  // $(".slider-prev").on("click", function(){
+  //   $slideContainer.animate({"margin-left": "+=700px"});
+  //   });
+  // });
+
+
   $(".slider-next").on("click", function(){
-    $slideContainer.animate({"margin-left": "-=700px"});
-
-  $(".slider-prev").on("click", function(){
-    $slideContainer.animate({"margin-left": "+=700px"});
-    });
-  });
-
-
-
-$(function(){
-
-  // cacheDOM when clicked
-  var changeOnClick = 700; // rigth button action when clicked
-  var currentClickSlide = 1;
-  var speedOfAnimationWhenClicked = 300;
-  var $slider = $("#slider"); //div w którym jest slider
-  var $slideContainer = $slider.find(".slides"); // ul
-  var $slides = $slideContainer.find(".slide"); // li
-
-//slider buttons
-//do poprawy!
-function actionOnCLick(){
-    var action = clickNext(function(){
-
-      $slideContainer.animate({"margin-left": "+=" + changeOnClick}, speedOfAnimationWhenClicked, function(){
-        currentClickSlide ++;
-        if (currentSlide === $slides.length) {
-          currentSlide = 1;
+      var currentClickSlide = 1;
+      var $slider = $("#slider"); //div w którym jest slider
+      var $slideContainer = $slider.find(".slides"); // ul
+      var $slides = $slideContainer.find(".slide"); // li
+      for (var i=0; i<$slides.length; i++){
+        $slideContainer.animate({"margin-left": "-=700"}, 300);
+        currentClickSlide++;
+        if (currentClickSlide === $slides.length) {
+          currentClickSlide = 1;
           $slideContainer.css("margin-left", 0);
-        }
-      })
-    }, pause);
-    console.log("cos");
-  }
-
-  actionOnCLick();
-  $(".slider-next").on("click", actionOnCLick);
-
-})
+      }
+      }
+    })
 
 // ---------------------------------------------------------------------------
 // logo - fading, resizing
