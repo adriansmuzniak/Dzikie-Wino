@@ -79,29 +79,62 @@ $(function(){
 })
 
 // -----------------------test------------------------------
-  // $(".slider-next").on("click", function(){
-  //   $slideContainer.animate({"margin-left": "-=700px"});
+
+  // var index = 1;
   //
-  // $(".slider-prev").on("click", function(){
-  //   $slideContainer.animate({"margin-left": "+=700px"});
-  //   });
-  // });
+  // function indexPlus(n) {
+  //     index = index + n;
+  //     showImage(index);
+  // }
+  //
+  // showImage(1);
+  //
+  // function showImage(n){
+  //
+  // }
 
 
-  $(".slider-next").on("click", function(){
-      var currentClickSlide = 1;
-      var $slider = $("#slider"); //div w którym jest slider
-      var $slideContainer = $slider.find(".slides"); // ul
-      var $slides = $slideContainer.find(".slide"); // li
-      for (var i=0; i<$slides.length; i++){
-        $slideContainer.animate({"margin-left": "-=700"}, 300);
-        currentClickSlide++;
-        if (currentClickSlide === $slides.length) {
-          currentClickSlide = 1;
-          $slideContainer.css("margin-left", 0);
-      }
-      }
-    })
+
+
+
+  // $(".slider-next").on("click", function(){
+  //   var currentClickSlide = 1;
+  //     var $slider = $("#slider"); //div w którym jest slider
+  //     var $slideContainer = $slider.find(".slides"); // ul
+  //     var $slides = $slideContainer.find(".slide"); // li
+  //
+  //     $slideContainer.animate({"margin-left": "-=700"}, 300);
+  //
+  //     // currentClickSlide++;
+  //     // console.log(currentClickSlide);
+  //     // if (currentClickSlide === 3) {
+  //     //   currentClickSlide = 1;
+  //     //   $slideContainer.css("margin-left", 0);
+  //     // }
+  //   })
+
+    $(".slider-next").on("click", function(){
+        var currentClickSlide = 1;
+        var $slider = $("#slider"); //div w którym jest slider
+        var $slideContainer = $slider.find(".slides"); // ul
+        var $slides = $slideContainer.find(".slide"); // li
+
+        $slideContainer.animate({"margin-left": "+=700"}, 300);
+
+        for (var i=0; i<$slideContainer.length-1; i++){
+          currentClickSlide++;
+          if (currentClickSlide == $slideContainer.length){
+            currentClickSlide = 1;
+            $slideContainer.css("margin-left", 0);
+          }
+        }
+        // currentClickSlide++;
+        // console.log(currentClickSlide);
+        // if (currentClickSlide === 3) {
+        //   currentClickSlide = 1;
+        //   $slideContainer.css("margin-left", 0);
+        // }
+      })
 
 // ---------------------------------------------------------------------------
 // logo - fading, resizing
