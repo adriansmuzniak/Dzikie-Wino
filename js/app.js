@@ -86,12 +86,16 @@ $("#slider").hover(
     if(!next.length){
       next = $(".slides img:first");
       next.addClass('active');
-      current.removeClass("active")
+
+      current.animate({opacity: 0.0}, 300, function(){
+        current.removeClass("active");
+        current.css({opacity: 1.0})
+      })
 
     }else{
-      next.css({opacity: 0.5})
+      next.css({opacity: 0.0})
       .addClass("active")
-      .animate({opacity: 1.0}, 1000, function(){
+      .animate({opacity: 1.0}, 300, function(){
         current.removeClass("active");
       });
       // next.addClass('active');
@@ -101,15 +105,6 @@ $("#slider").hover(
    }
    setInterval(change, 3000);
  })
-
-
-
-
-
-
-
-
-
 
 $(".slider-next").on("click", function(){
   var cos = $(".slides").find("img");
