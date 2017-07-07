@@ -1,10 +1,6 @@
 // require("../css/main.css");
-document.addEventListener("DOMContentLoaded", function(){
-
-
-  // action after click
-
-
+$(document).ready(function(){
+// action after click
 
 //-----------------Button prev-------------------------------
 $(".slider-prev").hover(
@@ -25,9 +21,6 @@ $(".slider-next").hover(
     $(this).animate({"left": "-=10px",},100);
   }
 )
-
-
-
 // ----------------------------LOGO---------------------------------------------------
 $("#slider").hover(
   function(){
@@ -41,46 +34,63 @@ $("#slider").hover(
 )
 
 // ----------------------------------------------------------------
-
-$(function(){
-// configuration
- var width = 700; //szerokość
- var animationSpeed = 500; //szybkość animacji - 1s
- var pause = 3000; //szybkość pętli
- var currentSlide = 1;
-
-//cacheDOM
- var $slider = $("#slider"); //div w którym jest slider
- var $slideContainer = $slider.find(".slides"); // ul
- var $slides = $slideContainer.find(".slide"); // li
-
- var interval; // interval na zewnątrz - scope
-
- function startSlider(){
-   interval = setInterval(function(){
-     $slideContainer.animate({"margin-left": "-="+ width},  animationSpeed, function() {
-       currentSlide++;
-       if (currentSlide === $slides.length) {
-         currentSlide = 1;
-         $slideContainer.css("margin-left", 0);
-       }
-     });
-   }, pause);
- }
-
-//pauza po najechaniu
- function pauseSlider(){
-  clearInterval(interval);
-  }
-
-//start po najechaniu
-  startSlider(); //wywołanie funkcji
-  $slider.on("mouseenter", pauseSlider).on("mouseleave", startSlider);
-})
+//
+// $(function(){
+// // configuration
+//  var width = 700; //szerokość
+//  var animationSpeed = 500; //szybkość animacji - 1s
+//  var pause = 3000; //szybkość pętli
+//  var currentSlide = 1;
+//
+// //cacheDOM
+//  var $slider = $("#slider"); //div w którym jest slider
+//  var $slideContainer = $slider.find(".slides"); // ul
+//  var $slides = $slideContainer.find(".slide"); // li
+//
+//  var interval; // interval na zewnątrz - scope
+//
+//  function startSlider(){
+//    interval = setInterval(function(){
+//      $slideContainer.animate({"margin-left": "-="+ width},  animationSpeed, function() {
+//        currentSlide++;
+//        if (currentSlide === $slides.length) {
+//          currentSlide = 1;
+//          $slideContainer.css("margin-left", 0);
+//        }
+//      });
+//    }, pause);
+//  }
+//
+// //pauza po najechaniu
+//  function pauseSlider(){
+//   clearInterval(interval);
+//   }
+//
+// //start po najechaniu
+//   startSlider(); //wywołanie funkcji
+//   $slider.on("mouseenter", pauseSlider).on("mouseleave", startSlider);
+// })
 
 // -----------------------test------------------------------
  //
 
+$(".slider-next").on("click", function(){
+  var currentImage = $(".active");
+  var nextImage = currentImage.next();
+  if(nextImage.length){
+    currentImage.removeClass("active").css('z-index', -10);
+    nextImage.addClass('active').css('z-index', 10);
+  }
+})
+
+$(".slider-prev").on("click", function(){
+  var currentImage = $(".active");
+  var prevImage = currentImage.prev();
+  if(prevImage.length){
+    currentImage.removeClass("active").css('z-index', -10);
+    prevImage.addClass('active').css('z-index', 10);
+  }
+})
 
 
   // ---------------------------------------------------------------------------
