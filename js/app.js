@@ -74,6 +74,43 @@ $("#slider").hover(
 // -----------------------test------------------------------
  //
 
+ $(function(){
+   $(".slides img:first").addClass("active");
+
+   var change = function(){
+     //change class active
+    //  alert("sample")
+    var current = $(".slides img.active");
+    var next = current.next();
+
+    if(!next.length){
+      next = $(".slides img:first");
+      next.addClass('active');
+      current.removeClass("active")
+
+    }else{
+      next.css({opacity: 0.5})
+      .addClass("active")
+      .animate({opacity: 1.0}, 1000, function(){
+        current.removeClass("active");
+      });
+      // next.addClass('active');
+      // current.removeClass("active");
+
+    }
+   }
+   setInterval(change, 3000);
+ })
+
+
+
+
+
+
+
+
+
+
 $(".slider-next").on("click", function(){
   var cos = $(".slides").find("img");
   console.log(cos.length);
