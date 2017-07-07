@@ -79,47 +79,22 @@ $(function(){
 })
 
 // -----------------------test------------------------------
+ //
 
-  var index = 1;
+ var counter = 0;
+ $(".slider-next").on("click", function(){
+   var $slider = $("#slider"); //div w którym jest slider
+   var $slideContainer = $slider.find(".slides"); // ul
+   var $slides = $slideContainer.find(".slide"); // li
 
-  function indexPlus(n) {
-      index = index + n;
-      showImage(index);
-  }
-
-
-  function showImage(n){
-    var i;
-    var x = document.getElementsByClassName("slide");
-    if (n>x.length) {
-      index = x.length
-    };
-    if (n < 1) {
-      index = x.length
-    };
-    for (i=0; i<x.length; i++){
-      x[i].style.display = "none";
+   $($slideContainer).animate({"margin-left": "-=700px"},500)
+    if ($slideContainer.css("margin-left") == "4200px"){
+      $slideContainer.css("margin-left", 0);
+      console.log("jebaj");
     }
-    x[index-1].style.display = "block";
-  }
+ })
 
-  showImage(1);
-
-    $(".slider-next").on("click", showImage(1){
-      var $slider = $("#slider"); //div w którym jest slider
-      var $slideContainer = $slider.find(".slides"); // ul
-      var $slides = $slideContainer.find(".slide"); // li
-      $slideContainer.animate({"margin-left": "-=700"}, 300),
-    }
-
-    $(".slider-prev").on("click", showImage(-1){
-      var $slider = $("#slider"); //div w którym jest slider
-      var $slideContainer = $slider.find(".slides"); // ul
-      var $slides = $slideContainer.find(".slide"); // li
-      $slideContainer.animate({"margin-left": "-=700"}, 300),
-    }
-
-// ---------------------------------------------------------------------------
+  // ---------------------------------------------------------------------------
 // logo - fading, resizing
 
 var span = $(".span-headers");
