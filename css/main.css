@@ -479,10 +479,14 @@ nav {
   height: 50px;
   width:  240px;
   padding: 10px;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 30px;
   position: relative;
   left: -25px;
+}
+
+#images-show .gallery-section:first-of-type .section-button{
+  margin-top: 100px;
 }
 
 #about{
