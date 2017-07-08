@@ -1,8 +1,7 @@
 // require("../css/main.css");
 $(document).ready(function(){
 // action after click
-
-//-----------------Button prev-------------------------------
+//-----------------Slider Button prev animation---------------------------
 $(".slider-prev").hover(
   function(){
     $(this).finish().animate({"left": "-=10px"},100);
@@ -11,8 +10,7 @@ $(".slider-prev").hover(
     $(this).finish().animate({"left": "+=10px"},100);
   }
 )
-
-// ---------------Button next------------------------------------------
+// ---------------Slider Button next animation----------------------------
 $(".slider-next").hover(
   function(){
     $(this).finish().animate({"left": "+=10px",},100);
@@ -21,7 +19,7 @@ $(".slider-next").hover(
     $(this).finish().animate({"left": "-=10px",},100);
   }
 )
-// ----------------------------LOGO---------------------------------------------------
+// ----------------------------LOGO------------------------------------
 $("#slider").hover(
   function(){
     $("#logo").stop(true,true).animate({"height": "155px", "width": "170px","opacity": "0.2"},1);
@@ -32,9 +30,7 @@ $("#slider").hover(
       $("#slider").stop(true,true).animate({"z-index": "-=1"},1);
   }
 )
-
 // ----------------------------------------------------------------
-//
 // $(function(){
 // // configuration
 //  var width = 700; //szerokość
@@ -71,9 +67,7 @@ $("#slider").hover(
 //   $slider.on("mouseenter", pauseSlider).on("mouseleave", startSlider);
 // })
 
-// -----------------------test------------------------------
- //
-
+// -----------------------Slider carousel 2------------------------------
  $(function(){
    $(".slides img:first").addClass("active");
 
@@ -86,12 +80,10 @@ $("#slider").hover(
     if(!next.length){
       next = $(".slides img:first");
       next.addClass('active');
-
       current.animate({opacity: 0.0}, 300, function(){
         current.removeClass("active");
         current.css({opacity: 1.0})
       })
-
     }else{
       next.css({opacity: 0.0})
       .addClass("active")
@@ -105,7 +97,7 @@ $("#slider").hover(
     }
     setInterval(change, 3000);
  })
-
+// -------------------Slider prev,next buttons action------------
 $(".slider-next").on("click", function(){
   var cos = $(".slides").find("img");
   console.log(cos.length);
@@ -125,44 +117,26 @@ $(".slider-prev").on("click", function(){
   if(prevImage.length){
     currentImage.removeClass("active").css('z-index', -10);
     prevImage.addClass('active').css('z-index', 10);
-
   }
 })
-
-
-
-
-  // -------------------------------------------------------------------
-// logo - fading, resizing
-
-
-
+// -------------------Virginia Creeper button resizing-------------------
 $(".background").hover(
   function(){
-  
-
-    $(".background").finish(true,true).animate({"width": "103%", "left": "-15px", "height": "375px"}, 200, function(){
+      scrollToAnchor('.background');
+      $(".background").finish(true,true).animate({"width": "103%", "left": "-15px", "height": "375px"}, 200, function(){
       $(".span-text").fadeIn(400).css("display", "in-block");
     },);
   },
   function(){
-
-    // $(".span-text").css("display", "none");
     $("body").animate({"opacity": "1"})
     $(".span-text").finish(true,true).fadeOut(200, function(){
       $(".background").animate({"width": "50%", "left": "26%", "height": "150px"}, 200);
     })
   })
-
-  // $(".section-button").stop(true, true).fadeOut(500, "swing" );
-  // $(".span-text").fadeOut(100);
-  // $(".background").animate({"opacity": "0.9", "height": "-=225px", "width": "-=450px", "position": "relative","left": "22%"},500);
-
-  // $(".span-text").fadeIn(4000);
-  // $(".background").animate({"position": "relative","left": "-1%", "opacity": "1", "height": "+=225px", "width": "+=450px"},300);
-  //
-  // $(".section-button").stop(true, true).fadeIn(700, "swing");
-
-
+// ----------------------Gallery scroll tests----------------------
+function scrollToAnchor(){
+    var sectionPosition = $(".background");
+    $('html,body').animate({scrollTop: sectionPosition.offset().top},3000);
+}
 
 });
