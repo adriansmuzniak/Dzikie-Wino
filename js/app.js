@@ -101,10 +101,9 @@ $("#slider").hover(
       });
       // next.addClass('active');
       // current.removeClass("active");
-
+      }
     }
-   }
-   setInterval(change, 3000);
+    setInterval(change, 3000);
  })
 
 $(".slider-next").on("click", function(){
@@ -112,6 +111,7 @@ $(".slider-next").on("click", function(){
   console.log(cos.length);
   var currentImage = $(".active");
   var nextImage = currentImage.next();
+
   if(nextImage.length){
     currentImage.removeClass("active").css('z-index', -10);
     nextImage.addClass('active').css('z-index', 10);
@@ -121,9 +121,11 @@ $(".slider-next").on("click", function(){
 $(".slider-prev").on("click", function(){
   var currentImage = $(".active");
   var prevImage = currentImage.prev();
+
   if(prevImage.length){
     currentImage.removeClass("active").css('z-index', -10);
     prevImage.addClass('active').css('z-index', 10);
+
   }
 })
 
@@ -138,15 +140,21 @@ console.log();
 
 $(".background").hover(
   function(){
-    // $(".section-button").stop(true, true).fadeOut(500, "swing" );
-    $(".span-text").fadeOut(100);
-    $(".background").animate({"opacity": "0.9", "height": "-=225px", "width": "-=450px"},1000).animate({"position": "relative","left": "22%"},500);
+    $(".background").animate({"width": "103%"}, 1000)
   },
   function(){
-    $(".span-text").fadeIn(4000);
-    $(".background").animate({"position": "relative","left": "-1%"},500).animate({"opacity": "1", "height": "+=225px", "width": "+=450px"},300);
-
-    // $(".section-button").stop(true, true).fadeIn(700, "swing");
-
+    $(".background").animate({"width": "50%"}, 1000)
   })
+
+  // $(".section-button").stop(true, true).fadeOut(500, "swing" );
+  // $(".span-text").fadeOut(100);
+  // $(".background").animate({"opacity": "0.9", "height": "-=225px", "width": "-=450px", "position": "relative","left": "22%"},500);
+
+  // $(".span-text").fadeIn(4000);
+  // $(".background").animate({"position": "relative","left": "-1%", "opacity": "1", "height": "+=225px", "width": "+=450px"},300);
+  //
+  // $(".section-button").stop(true, true).fadeIn(700, "swing");
+
+
+
 });

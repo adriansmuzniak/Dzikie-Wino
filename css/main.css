@@ -227,7 +227,7 @@ nav {
 #slider img:hover{
 
   cursor: pointer;
-  transform: scale(1.2);
+  /*transform: scale(1.2);*/
   opacity: 0.9;
   position: relative;
 }
@@ -361,9 +361,9 @@ nav {
 
 .background {
   float: left;
-  width: 103%;
-  height: 375px;
-  left: -15px;
+  width: 50%;
+  height: 150px;
+  left: 26%;
   position: relative;
   /*height: 300px;*/
   border-top: 3px double lightgrey;
@@ -425,7 +425,7 @@ nav {
   color: white;
   font-family:  'Great Vibes', Arial, sans-serif;
   width: 900px;
-  display: block;
+  display: none;
   margin-top: 20px;
   margin-bottom: 30px;
   font-size: 34px;
