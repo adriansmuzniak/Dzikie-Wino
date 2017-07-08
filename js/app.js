@@ -95,6 +95,7 @@ $("#slider").hover(
     }else{
       next.css({opacity: 0.0})
       .addClass("active")
+      .animate({scale: 1.3})
       .animate({opacity: 1.0}, 300, function(){
         current.removeClass("active");
       });
