@@ -135,18 +135,20 @@ $(".slider-prev").on("click", function(){
   // -------------------------------------------------------------------
 // logo - fading, resizing
 
-var span = $(".span-headers");
-console.log();
+
 
 $(".background").hover(
   function(){
+  
+
     $(".background").finish(true,true).animate({"width": "103%", "left": "-15px", "height": "375px"}, 200, function(){
       $(".span-text").fadeIn(400).css("display", "in-block");
-
     },);
   },
   function(){
+
     // $(".span-text").css("display", "none");
+    $("body").animate({"opacity": "1"})
     $(".span-text").finish(true,true).fadeOut(200, function(){
       $(".background").animate({"width": "50%", "left": "26%", "height": "150px"}, 200);
     })
