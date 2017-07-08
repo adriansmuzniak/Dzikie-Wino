@@ -22,10 +22,14 @@ $(".slider-next").hover(
 // ----------------------------LOGO------------------------------------
 $("#slider").hover(
   function(){
+    $(".slider-next").finish().animate({"left": "+=15px","opacity": "0.3"},400);
+    $(".slider-prev").finish().animate({"left": "-=15px","opacity": "0.3"},400);
     $("#logo").stop(true,true).animate({"height": "155px", "width": "170px","opacity": "0.2"},1);
     $("#slider").stop(true,true).animate({"z-index": "+=1"},200);
   },
   function(){
+    $(".slider-next").finish().animate({"left": "-=15px","opacity": "1"},200);
+    $(".slider-prev").finish().animate({"left": "+=15px","opacity": "1"},200);
     $("#logo").stop(true,true).animate({"height": "180px", "width": "200px", "opacity": "1" },1);
       $("#slider").stop(true,true).animate({"z-index": "-=1"},1);
   }
@@ -130,13 +134,13 @@ $(".background").hover(
   function(){
     $("body").animate({"opacity": "1"})
     $(".span-text").finish(true,true).fadeOut(200, function(){
-      $(".background").animate({"width": "50%", "left": "26%", "height": "150px"}, 200);
+      $(".background").animate({"width": "50%", "left": "26%", "height": "150px"}, 400);
     })
   })
 // ----------------------Gallery scroll tests----------------------
 function scrollToAnchor(){
     var sectionPosition = $(".background");
-    $('html,body').animate({scrollTop: sectionPosition.offset().top},3000);
+    $('html,body').animate({scrollTop: sectionPosition.offset().top},1000);
 }
 
 });
