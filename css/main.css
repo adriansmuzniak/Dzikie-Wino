@@ -382,7 +382,7 @@ nav {
   text-align: center;
   height: 100px;
   width: 300px;
-  display: inline-block;
+  display: block;
   border: 1px solid black;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -429,6 +429,8 @@ nav {
   margin-top: 20px;
   margin-bottom: 30px;
   font-size: 34px;
+  /*padding-left: 30px;*/
+  /*padding-right: 30px;*/
 
 
 }

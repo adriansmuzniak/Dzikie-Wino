@@ -140,10 +140,16 @@ console.log();
 
 $(".background").hover(
   function(){
-    $(".background").animate({"width": "103%"}, 1000)
+    $(".background").stop().animate({"width": "103%", "left": "-15px", "height": "375px"}, 400, function(){
+      $(".span-text").fadeIn(600).css("display", "in-block");
+
+    },);
   },
   function(){
-    $(".background").animate({"width": "50%"}, 1000)
+    // $(".span-text").css("display", "none");
+    $(".span-text").fadeOut(200, function(){
+      $(".background").animate({"width": "50%", "left": "26%", "height": "150px"}, 400);
+    })
   })
 
   // $(".section-button").stop(true, true).fadeOut(500, "swing" );
