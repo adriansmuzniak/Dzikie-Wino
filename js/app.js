@@ -143,4 +143,23 @@ function scrollToAnchor(){
     $('html,body').animate({scrollTop: sectionPosition.offset().top},1000);
 }
 
+// -------------------lightbox creation test-----------------
+
+var images = $(".gallery-section").find("img");
+var lightbox = $("#lightbox");
+var allSections = $("html, body").not("#lightbox");
+// var closeButton = // to be added
+// var nextButton = //to be added
+// var prevButton = //to be added
+
+images.on("click", function(event){
+  var imgUrl = $(event.target).attr("src")
+  lightbox.css("visibility", "visible");
+  lightbox.css("background-image", "url("+imgUrl+")");
+  lightbox.css({"background-size": "contain"});
+  allSections.addClass("opacity");
+})
+
+
+
 });
