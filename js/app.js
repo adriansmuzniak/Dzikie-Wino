@@ -157,7 +157,8 @@ images.on("click", function(event){
   lightbox.css("visibility", "visible");
   lightbox.css("background-image", "url("+imgUrl+")");
   lightbox.css({"background-size": "contain"});
-  allSections.addClass("opacity");
+
+  allSections.addClass("opacity")
 })
 
 
