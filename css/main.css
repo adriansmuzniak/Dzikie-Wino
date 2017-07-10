@@ -205,6 +205,53 @@ nav {
   transition: 1.5s ease-in-out;
   z-index: -1;
 }
+
+.slider-prev {
+  float: left;
+  position: relative;
+  top: 170px;
+  left: -525px;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2px;
+  font-size: 32px;
+  background-color: lightgrey;
+  border-radius: 20%;
+  box-shadow: 1px 1px 2px darkgoldenrod;
+  font-weight: bold;
+  opacity: 0.8;
+  border: 1px solid darkgrey;
+  color: #69333E;
+}
+
+.slider-prev:hover, .slider-next:hover{
+  opacity: 1;
+  box-shadow: 2px 2px 4px darkgoldenrod;
+  border: 1px solid #47000E;
+  border-radius: 25%;
+  cursor: pointer;
+}
+
+.slider-next {
+  float: left;
+  color: #47000E;
+  position: relative;
+  top: 170px;
+  left: 290px;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 2px;
+  font-size: 32px;
+  background-color: lightgrey;
+  border-radius: 20%;
+  box-shadow: 1px 1px 5px darkgoldenrod;
+  font-weight: bold;
+  border: 1px solid darkgrey;
+  opacity: 0.8;
+}
+
 /*hovery dla galerii*/
 
 .div-color1:hover, .div-color3:hover {
@@ -299,6 +346,7 @@ nav {
   top: 0px;
 }
 
+/*sekcja z rozsuwanym buttonem*/
 #welcome{
   margin-top: 30px;
 }
@@ -375,6 +423,7 @@ nav {
   font-size: 42px;
 }
 
+/*gallery section*/
 .gallery-section {
   height: 620px;
   left: 25px;
@@ -395,6 +444,8 @@ nav {
   border-radius: 3%;
 }
 
+
+
 #images-show {
   margin-top: 30px;
   margin-bottom: 15px;
@@ -413,6 +464,18 @@ nav {
 
 #images-show .gallery-section:first-of-type .section-button{
   margin-top: 100px;
+}
+
+#lightbox {
+  display: inline;
+  position: fixed;
+  transform: translate(-50%, 20%);
+  width: 650px;
+  height: 420px;
+  text-align: center;
+  border: 2px solid #ff006c;
+  visibility: hidden;
+  z-index: 20;
 }
 
 #about{
@@ -454,50 +517,4 @@ nav {
 .about.photo img{
   width: 250px;
   height: 300px;
-}
-
-.slider-prev {
-  float: left;
-  position: relative;
-  top: 170px;
-  left: -525px;
-  width: 40px;
-  text-align: center;
-  display: inline-block;
-  padding-top: 2px;
-  font-size: 32px;
-  background-color: lightgrey;
-  border-radius: 20%;
-  box-shadow: 1px 1px 2px darkgoldenrod;
-  font-weight: bold;
-  opacity: 0.8;
-  border: 1px solid darkgrey;
-  color: #69333E;
-}
-
-.slider-prev:hover, .slider-next:hover{
-  opacity: 1;
-  box-shadow: 2px 2px 4px darkgoldenrod;
-  border: 1px solid #47000E;
-  border-radius: 25%;
-  cursor: pointer;
-}
-
-.slider-next {
-  float: left;
-  color: #47000E;
-  position: relative;
-  top: 170px;
-  left: 290px;
-  width: 40px;
-  text-align: center;
-  display: inline-block;
-  padding-top: 2px;
-  font-size: 32px;
-  background-color: lightgrey;
-  border-radius: 20%;
-  box-shadow: 1px 1px 5px darkgoldenrod;
-  font-weight: bold;
-  border: 1px solid darkgrey;
-  opacity: 0.8;
 }

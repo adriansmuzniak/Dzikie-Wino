@@ -127,7 +127,7 @@ $(".slider-prev").on("click", function(){
 $(".background").hover(
   function(){
       scrollToAnchor('.background');
-      $(".background").finish(true,true).animate({"width": "103%", "left": "-15px", "height": "375px"}, 200, function(){
+      $(".background").finish(true,true).animate({"width": "103%", "left": "-15px", "height": "375px"}, 400, function(){
       $(".span-text").fadeIn(400).css("display", "in-block");
     },);
   },
