@@ -149,8 +149,7 @@ var images = $(".gallery-section").find("img");
 var lightbox = $("#lightbox");
 var allSections = $("html, body");
 var coverDiv = $("#cover");
-console.log(coverDiv);
-// var closeButton = // to be added
+var closeButton = $("#closeButton");
 // var nextButton = //to be added
 // var prevButton = //to be added
 
@@ -163,8 +162,10 @@ images.on("click", function(event){
 })
 
 
-$("#cover").on("click", function(){
-  console.log("hi");
+closeButton.on("click", function(){
+  $("#cover").remove();
+  lightbox.css("visibility", "hidden")
+
 })
 
 

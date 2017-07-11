@@ -473,11 +473,12 @@ nav {
   width: 850px;
   height: 480px;
   text-align: center;
-  border: 10px solid white;
   padding: 20px;
   visibility: hidden;
   z-index: 100;
   background-repeat: no-repeat;
+  border-radius: 2%;
+  border: 2px solid wheat;
 }
 
 #cover {
@@ -494,20 +495,30 @@ nav {
 }
 
 #closeButton {
-  background-color: white;
+  background-color: black;
   position: relative;
-  left: 53%;
-  top: -9%;
-  font-size: 30px;
-  width: 40px;
-  height: 40px;
+  left: 52%;
+  top: -7%;
+  font-size: 23px;
+  width: 33px;
+  height: 33px;
   display: block;
   text-align: center;
   /* vertical-align: middle; */
   border-radius: 50%;
-  border: 1px solid grey;
+  border: 1px solid wheat;
   font-family: sans-serif;
   /*font-weight: bold;*/
+  color: white;
+  /*transition: .2s ease;*/
+}
+
+#closeButton:hover {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  top: -7%;
+  font-size: 25px;
 }
 
 #about{
