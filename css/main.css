@@ -473,12 +473,12 @@ nav {
   width: 850px;
   height: 480px;
   text-align: center;
-  /*border: 2px solid #ff006c;*/
+  border: 10px solid white;
+  padding: 20px;
   visibility: hidden;
   z-index: 100;
   background-repeat: no-repeat;
-  background-size: cover;
-  }
+}
 
 #cover {
   position: fixed;

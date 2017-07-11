@@ -158,14 +158,13 @@ images.on("click", function(event){
   var imgUrl = $(event.target).attr("src")
   lightbox.css("visibility", "visible");
   lightbox.css("background-image", "url("+imgUrl+")");
-  lightbox.css({"background-size": "contain"});
+  lightbox.css({"background-size": "cover"});
   $("body").prepend('<div id="cover">&nbsp;</div>');
+})
 
-}
 
-coverDiv.on("click", function){
-  coverDiv.remove();
-
+$("#cover").on("click", function(){
+  console.log("hi");
 })
 
 
