@@ -147,7 +147,9 @@ function scrollToAnchor(){
 
 var images = $(".gallery-section").find("img");
 var lightbox = $("#lightbox");
-var allSections = $("html, body").not("#lightbox");
+var allSections = $("html, body");
+var coverDiv = $("#cover");
+console.log(coverDiv);
 // var closeButton = // to be added
 // var nextButton = //to be added
 // var prevButton = //to be added
@@ -158,6 +160,11 @@ images.on("click", function(event){
   lightbox.css("background-image", "url("+imgUrl+")");
   lightbox.css({"background-size": "contain"});
   $("body").prepend('<div id="cover">&nbsp;</div>');
+
+}
+
+coverDiv.on("click", function){
+  coverDiv.remove();
 
 })
 
