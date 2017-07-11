@@ -157,8 +157,8 @@ images.on("click", function(event){
   lightbox.css("visibility", "visible");
   lightbox.css("background-image", "url("+imgUrl+")");
   lightbox.css({"background-size": "contain"});
+  $("body").prepend('<div id="cover">&nbsp;</div>');
 
-  allSections.addClass("opacity")
 })
 
 
