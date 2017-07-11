@@ -462,9 +462,6 @@ nav {
   left: -25px;
 }
 
-#images-show .gallery-section:first-of-type .section-button{
-  margin-top: 100px;
-}
 
 #lightbox {
   display: inline;
@@ -479,6 +476,10 @@ nav {
   background-repeat: no-repeat;
   border-radius: 2%;
   border: 2px solid wheat;
+  margin-top: -80px;
+}
+#images-show #section-button-first {
+  margin-top: 100px;
 }
 
 #cover {
@@ -504,21 +505,21 @@ nav {
   height: 33px;
   display: block;
   text-align: center;
-  /* vertical-align: middle; */
+   vertical-align: middle;
   border-radius: 50%;
   border: 1px solid wheat;
   font-family: sans-serif;
   /*font-weight: bold;*/
   color: white;
-  /*transition: .2s ease;*/
+  transition: .1s ;
 }
 
 #closeButton:hover {
-  width: 35px;
+  width: 36px;
   height: 35px;
   cursor: pointer;
-  top: -7%;
-  font-size: 25px;
+  top: -7.5%;
+  font-size: 24px;
 }
 
 #about{

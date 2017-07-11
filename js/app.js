@@ -157,7 +157,7 @@ images.on("click", function(event){
   var imgUrl = $(event.target).attr("src")
   lightbox.css("visibility", "visible");
   lightbox.css("background-image", "url("+imgUrl+")");
-  lightbox.css({"background-size": "cover"});
+  lightbox.css({"background-size": "100% 100%"});
   $("body").prepend('<div id="cover">&nbsp;</div>');
 })
 
