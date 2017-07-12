@@ -161,7 +161,6 @@ images.on("click", function(event){
   $("body").prepend('<div id="cover">&nbsp;</div>');
 })
 
-
 closeButton.on("click", function(){
   $("#cover").remove();
   lightbox.css("visibility", "hidden")
