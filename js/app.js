@@ -103,8 +103,6 @@ $("#slider").hover(
  })
 // -------------------Slider prev,next buttons action------------
 $(".slider-next").on("click", function(){
-  var cos = $(".slides").find("img");
-  console.log(cos.length);
   var currentImage = $(".active");
   var nextImage = currentImage.next();
 
@@ -146,12 +144,13 @@ function scrollToAnchor(){
 // -------------------lightbox creation test-----------------
 
 var images = $(".gallery-section").find("img");
+var imagesArray = [];
+imagesArray.push(images);
+
 var lightbox = $("#lightbox");
-var allSections = $("html, body");
-var coverDiv = $("#cover");
 var closeButton = $("#closeButton");
-// var nextButton = //to be added
-// var prevButton = //to be added
+var nextButton = $(".nextButton");
+var prevButton = $(".prevButton");
 
 images.on("click", function(event){
   var imgUrl = $(event.target).attr("src")
@@ -164,9 +163,15 @@ images.on("click", function(event){
 closeButton.on("click", function(){
   $("#cover").remove();
   lightbox.css("visibility", "hidden")
-
 })
 
+nextButton.on("click", function(){
+  console.log("Hi");
+})
+
+prevButton.on("click", function(){
+  console.log("Hi");
+})
 
 
 });

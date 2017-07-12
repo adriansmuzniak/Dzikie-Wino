@@ -472,7 +472,7 @@ nav {
   height: 480px;
   text-align: center;
   padding: 20px;
-  /*visibility: hidden;*/
+  visibility: hidden;
   z-index: 100;
   background-repeat: no-repeat;
   border-radius: 2%;
