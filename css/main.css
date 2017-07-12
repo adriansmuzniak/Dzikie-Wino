@@ -498,30 +498,71 @@ nav {
 }
 
 #closeButton {
-  left: 56%;
+  left: 100%;
   top: -9%;
   width: 33px;
   height: 33px;
-  font-size: 21px;
+  font-size: 22px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 2px solid wheat;
   font-family: sans-serif;
   background-color: black;
   position: relative;
   /*font-weight: bold;*/
   color: white;
-  transition: .1s ;
+  transition: 0.1s ;
+  float: left;
+  opacity: 0.9;
+  padding-left: 1px;
 }
 
 #closeButton:hover {
-  width: 35px;
-  height: 35px;
   cursor: pointer;
-  font-size: 22px;
+  background-color: wheat;
+  color: #47000E;
+  /*border: 2px solid white;*/
+  opacity: 1;
 }
+
+.prevButton, .nextButton {
+  float: left;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  background-color: black;
+  color: white;
+  opacity: 0.6;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 10%;
+  border: 1px solid wheat;
+  top: 180px;
+  padding-top: 3px;
+  transition: 0.1s;
+}
+
+.prevButton {
+  left: -55px;
+  padding-right: 2px;
+}
+
+.nextButton {
+  left: 694px;
+  padding-left: 2px;
+}
+
+.prevButton:hover, .nextButton:hover {
+  background-color: wheat;
+  color: #47000E;
+  cursor: pointer;
+  border: 1px solid #47000E;
+  opacity: 1;
+}
+
 
 /*---------------------------------------------------------------------*/
 
