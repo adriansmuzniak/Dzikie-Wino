@@ -144,34 +144,36 @@ function scrollToAnchor(){
 // -------------------lightbox creation test-----------------
 
 var images = $(".gallery-section").find("img");
-var imagesArray = [];
-imagesArray.push(images);
-
+var counter = 0;
 var lightbox = $("#lightbox");
 var closeButton = $("#closeButton");
 var nextButton = $(".nextButton");
 var prevButton = $(".prevButton");
 
 images.on("click", function(event){
+  console.log(images.index(this));
   var imgUrl = $(event.target).attr("src")
   lightbox.css("visibility", "visible");
   lightbox.css("background-image", "url("+imgUrl+")");
   lightbox.css({"background-size": "100% 100%"});
   $("body").prepend('<div id="cover">&nbsp;</div>');
+
+  closeButton.on("click", function(){
+    $("#cover").remove();
+    lightbox.css("visibility", "hidden")
+  })
+
+  nextButton.on("click", function(){
+    // var indexOfClicked =
+
+  })
+
+  prevButton.on("click", function(){
+    console.log("Hi");
+  })
+
 })
 
-closeButton.on("click", function(){
-  $("#cover").remove();
-  lightbox.css("visibility", "hidden")
-})
-
-nextButton.on("click", function(){
-  console.log("Hi");
-})
-
-prevButton.on("click", function(){
-  console.log("Hi");
-})
 
 
 });
