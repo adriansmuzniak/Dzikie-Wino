@@ -465,19 +465,19 @@ nav {
 /*lightbox section+buttons*/
 
 #lightbox {
-  display: inline;
-  position: fixed;
-  transform: translate(-50%, 0%);
   width: 850px;
   height: 480px;
-  text-align: center;
-  padding: 20px;
   visibility: hidden;
-  z-index: 100;
+  display: inline;
+  position: fixed;
+  text-align: center;
   background-repeat: no-repeat;
+  margin-top: -80px;
   border-radius: 2%;
   border: 2px solid wheat;
-  margin-top: -80px;
+  transform: translate(-50%, 0%);
+  padding: 20px;
+  z-index: 100;
 }
 
 #images-show #section-button-first {
@@ -528,10 +528,11 @@ nav {
 }
 
 .prevButton, .nextButton {
+  top: 180px;
+  width: 50px;
+  height: 50px;
   float: left;
   display: inline-block;
-  height: 50px;
-  width: 50px;
   position: relative;
   background-color: black;
   color: white;
@@ -540,9 +541,9 @@ nav {
   text-align: center;
   border-radius: 10%;
   border: 1px solid wheat;
-  top: 180px;
   padding-top: 3px;
-  transition: 0.1s;
+  /*transition: 0.1s;*/
+  /*visibility: hidden;*/
 }
 
 .prevButton {

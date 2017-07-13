@@ -165,15 +165,23 @@ images.on("click", function(event){
 
   nextButton.on("click", function(){
     // var indexOfClicked =
-
   })
 
   prevButton.on("click", function(){
     console.log("Hi");
   })
-
 })
 
-
-
-});
+// ---------------------------------------------------------------------
+// $("#lightbox").hover(
+//   function(){
+//     $(".prevButton, .nextButton").stop().fadeIn(200, function(){
+//       $(this).animate({"height": "+=3px", "top": "180px"});
+//     });
+//   },
+//   function(){
+//     $(".prevButton, .nextButton").stop().animate({"height": "-=3px", "top": "175px"}, function(){
+//       $(this).fadeOut(200)
+//     });
+//   })
+  });
