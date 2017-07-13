@@ -142,9 +142,10 @@ function scrollToAnchor(){
 }
 
 // -------------------lightbox creation Window-----------------
+var imagesLibrary = ["images/slub/wiazanka4.jpg","images/slub/auto1.jpg","images/slub/kosciol2.jpg","images/slub/love1.jpg","images/slub/kosciol10.jpg","images/slub/auto2.jpg","images/slub/kosciol3.jpg","images/slub/sala4.jpg","images/slub/wiazanka2.jpg","images/komunia/komunia2.jpg","images/slub/wiazanka3.jpg","images/slub/sloiki1.jpg","images/slub/kosciol5.jpg","images/slub/kosciol13.jpg","images/komunia/bzy.jpg","images/komunia/komunia4.jpg","images/aranzacja/aranzacja1.jpg","images/aranzacja/aranzacja2.jpg","images/aranzacja/aranzacja3.jpg","images/aranzacja/aranzacja4.jpg","images/aranzacja/aranzacja5.jpg","images/aranzacja/aranzacja6.jpg","images/aranzacja/aranzacja7.jpg","images/aranzacja/aranzacja9.jpg"];
 
 var images = $(".gallery-section").find("img");
-
+console.log(images[0].outerHTML);
 var lightbox = $("#lightbox");
 var closeButton = $("#closeButton");
 var nextButton = $(".nextButton");
@@ -165,15 +166,7 @@ images.on("click", function(event){
 
   nextButton.on("click", function(){
     var counter = indexOfClicked;
-    lightbox.fadeOut(200, function(){
-      lightbox.css("background-image": "none");
-      counter++;
-      lightbox.css("background-image", "url("+images[counter]+")");
-      lightbox.fadeIn(300);
-    })
-
-    // lightbox.css("background-image", "none");
-    lightbox.css("background-image", "url("+images+")");
+    lightbox.css("background-image", "url("+imagesLibrary[0]+")");
   })
 
   prevButton.on("click", function(){
