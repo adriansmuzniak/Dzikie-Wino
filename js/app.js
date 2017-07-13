@@ -135,13 +135,13 @@ $(".background").hover(
       $(".background").animate({"width": "50%", "left": "26%", "height": "150px"}, 400);
     })
   })
-// ----------------------Gallery scroll tests----------------------
+// ----------------------Virginia Creeper button scroll to---------------
 function scrollToAnchor(){
     var sectionPosition = $(".background");
     $('html,body').animate({scrollTop: sectionPosition.offset().top},1000);
 }
 
-// -------------------lightbox creation test-----------------
+// -------------------lightbox creation Window-----------------
 
 var images = $(".gallery-section").find("img");
 var counter = 0;
@@ -151,7 +151,7 @@ var nextButton = $(".nextButton");
 var prevButton = $(".prevButton");
 
 images.on("click", function(event){
-  console.log(images.index(this));
+  var indexOfClicked = images.index(this);
   var imgUrl = $(event.target).attr("src")
   lightbox.css("visibility", "visible");
   lightbox.css("background-image", "url("+imgUrl+")");
@@ -164,24 +164,23 @@ images.on("click", function(event){
   })
 
   nextButton.on("click", function(){
-    // var indexOfClicked =
+    var counter = indexOfClicked+1;
+    lightbox.css("background-image", 'url('+images[counter]+")");
   })
 
   prevButton.on("click", function(){
-    console.log("Hi");
+
   })
 })
 
-// ---------------------------------------------------------------------
-// $("#lightbox").hover(
-//   function(){
-//     $(".prevButton, .nextButton").stop().fadeIn(200, function(){
-//       $(this).animate({"height": "+=3px", "top": "180px"});
-//     });
-//   },
-//   function(){
-//     $(".prevButton, .nextButton").stop().animate({"height": "-=3px", "top": "175px"}, function(){
-//       $(this).fadeOut(200)
-//     });
-//   })
+// ------------------Next/Prev lightbox button fading--------------------
+$("#lightbox").hover(
+  function(){
+    $(".prevButton, .nextButton").stop().fadeIn(200);
+  },
+  function(){
+    $(".prevButton, .nextButton").stop().fadeOut(200);
+  })
+// ----------------------------------------------------------------------
+
   });
