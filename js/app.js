@@ -144,7 +144,7 @@ function scrollToAnchor(){
 // -------------------lightbox creation Window-----------------
 
 var images = $(".gallery-section").find("img");
-var counter = 0;
+
 var lightbox = $("#lightbox");
 var closeButton = $("#closeButton");
 var nextButton = $(".nextButton");
@@ -164,8 +164,16 @@ images.on("click", function(event){
   })
 
   nextButton.on("click", function(){
-    var counter = indexOfClicked+1;
-    lightbox.css("background-image", 'url('+images[counter]+")");
+    var counter = indexOfClicked;
+    lightbox.fadeOut(200, function(){
+      lightbox.css("background-image": "none");
+      counter++;
+      lightbox.css("background-image", "url("+images[counter]+")");
+      lightbox.fadeIn(300);
+    })
+
+    // lightbox.css("background-image", "none");
+    lightbox.css("background-image", "url("+images+")");
   })
 
   prevButton.on("click", function(){
