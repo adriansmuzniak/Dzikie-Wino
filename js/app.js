@@ -164,24 +164,26 @@ images.on("click", function(event){
     lightbox.css("visibility", "hidden")
   })
 
-  // nextButton.on("click", function(){ //wywoałać działanie w funckji!!!!
-  //   var counter = indexOfClicked+1;
+
+    function goNext(){
+    var counter = indexOfClicked+1;
+    lightbox.fadeOut(200, function(){
+      lightbox.css("background-image", "url("+imagesLibrary[counter]+")");
+      lightbox.fadeIn(200);
+      counter++;
+      console.log(counter);
+      if(counter == imagesLibrary.length){
+        counter = 0;
+      }
+    });
+    }
+
+  nextButton.on("click", goNext);
+
+  // prevButton.on("click", function(){
   //
-  //   setInterval(function(){
-  //     lightbox.fadeOut(200, function(){
-  //     lightbox.css("background-image", "url("+imagesLibrary[counter]+")");
-  //     lightbox.fadeIn(200);
-  //     counter++
-  //   });
-  //   if(counter==imagesLibrary.length){
-  //     counter = 0;
-  //   }
-  // },2000)
   // })
 
-  prevButton.on("click", function(){
-
-  })
 })
 
 // ------------------Next/Prev lightbox button fading--------------------
