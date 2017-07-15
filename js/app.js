@@ -102,6 +102,7 @@ $("#slider").hover(
     setInterval(change, 3000);
  })
 // -------------------Slider prev,next buttons action------------
+
 $(".slider-next").on("click", function(){
   var currentImage = $(".active");
   var nextImage = currentImage.next();
@@ -151,7 +152,7 @@ var nextButton = $(".nextButton");
 var prevButton = $(".prevButton");
 var counter = 0;
 
-images.on("click", function(event){
+images.on("click", function(){
   var indexOfClicked = images.index(this);
   var imgUrl = $(event.target).attr("src")
   lightbox.css("visibility", "visible");
@@ -164,22 +165,16 @@ images.on("click", function(event){
     lightbox.css("visibility", "hidden")
   })
 
-
-    function goNext(){
+  nextButton.on("click",function(){
     var counter = indexOfClicked+1;
-    lightbox.fadeOut(200, function(){
-      lightbox.css("background-image", "url("+imagesLibrary[counter]+")");
-      lightbox.fadeIn(200);
-      counter++;
-      console.log(counter);
-      if(counter == imagesLibrary.length){
-        counter = 0;
-      }
-    });
-    }
+    var images = $(".gallery-section").find("img").next();
+    lightbox.css("background-image", "url("+imgUrl+")")
+  })
+// ---------------------
 
-  nextButton.on("click", goNext);
 
+// -----------------------
+// -------------------------
   // prevButton.on("click", function(){
   //
   // })
