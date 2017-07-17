@@ -165,13 +165,29 @@ images.on("click", function(){
     lightbox.css("visibility", "hidden")
   })
 
-});
-
+  var counter = indexOfClicked;
   nextButton.on("click",function(){
-    lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
+    lightbox.fadeOut(100, function(){
+      lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
+      lightbox.fadeIn(100);
+    })
     counter++;
     if (counter>=imagesLibrary.length) {
       counter = 0;
+    }
+  })
+});
+
+
+  prevButton.on("click",function(){
+    lightbox.fadeOut(100, function(){
+      lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
+      lightbox.fadeIn(100);
+    })
+    counter--;
+    console.log(counter);
+    if (counter==-1) {
+      counter = imagesLibrary.length;
     }
   })
 
