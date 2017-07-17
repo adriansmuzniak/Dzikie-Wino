@@ -150,7 +150,6 @@ var lightbox = $("#lightbox");
 var closeButton = $("#closeButton");
 var nextButton = $(".nextButton");
 var prevButton = $(".prevButton");
-var counter = 0;
 
 images.on("click", function(){
   var indexOfClicked = images.index(this);
@@ -166,30 +165,30 @@ images.on("click", function(){
   })
 
   var counter = indexOfClicked;
+
   nextButton.on("click",function(){
-    lightbox.fadeOut(100, function(){
+    lightbox.finish().fadeOut(200, function(){
       lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
-      lightbox.fadeIn(100);
+      lightbox.slideDown(100);
     })
     counter++;
     if (counter>=imagesLibrary.length) {
       counter = 0;
     }
   })
-});
-
 
   prevButton.on("click",function(){
-    lightbox.fadeOut(100, function(){
+    lightbox.finish().slideUp(200, function(){
       lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
       lightbox.fadeIn(100);
     })
     counter--;
-    console.log(counter);
     if (counter==-1) {
-      counter = imagesLibrary.length;
+      counter = imagesLibrary.length-1;
     }
   })
+});
+
 
 
 // ------------------Next/Prev lightbox button fading--------------------
