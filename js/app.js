@@ -167,9 +167,9 @@ images.on("click", function(){
   var counter = indexOfClicked;
 
   nextButton.on("click",function(){
-    lightbox.finish().fadeOut(200, function(){
+    lightbox.finish().fadeOut(100, function(){
       lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
-      lightbox.slideDown(100);
+      lightbox.fadeIn(300);
     })
     counter++;
     if (counter>=imagesLibrary.length) {
@@ -178,17 +178,22 @@ images.on("click", function(){
   })
 
   prevButton.on("click",function(){
-    lightbox.finish().slideUp(200, function(){
+    lightbox.finish().fadeOut(100, function(){
       lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
-      lightbox.fadeIn(100);
+      lightbox.fadeIn(300);
     })
     counter--;
     if (counter==-1) {
       counter = imagesLibrary.length-1;
     }
   })
+  $("#cover").on("click", function(){
+    $("#cover").remove();
+    lightbox.css("visibility", "hidden")
+  })
 });
 
+// ---------------------Div Cover on click-----------------------
 
 
 // ------------------Next/Prev lightbox button fading--------------------
