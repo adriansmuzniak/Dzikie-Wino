@@ -165,21 +165,16 @@ images.on("click", function(){
     lightbox.css("visibility", "hidden")
   })
 
+});
+
   nextButton.on("click",function(){
-    var counter = indexOfClicked+1;
-    var images = $(".gallery-section").find("img").next();
-    lightbox.css("background-image", "url("+imgUrl+")")
+    lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
+    counter++;
+    if (counter>=imagesLibrary.length) {
+      counter = 0;
+    }
   })
-// ---------------------
 
-
-// -----------------------
-// -------------------------
-  // prevButton.on("click", function(){
-  //
-  // })
-
-})
 
 // ------------------Next/Prev lightbox button fading--------------------
 $("#lightbox").hover(
