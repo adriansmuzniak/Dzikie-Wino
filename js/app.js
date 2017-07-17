@@ -167,7 +167,7 @@ images.on("click", function(){
   var counter = indexOfClicked;
 
   nextButton.on("click",function(){
-    lightbox.finish().fadeOut(100, function(){
+    lightbox.stop().fadeOut(100, function(){
       lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
       lightbox.fadeIn(300);
     })
@@ -178,7 +178,7 @@ images.on("click", function(){
   })
 
   prevButton.on("click",function(){
-    lightbox.finish().fadeOut(100, function(){
+    lightbox.stop().fadeOut(100, function(){
       lightbox.css("background-image", "url("+imagesLibrary[counter]+")")
       lightbox.fadeIn(300);
     })

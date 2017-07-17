@@ -607,3 +607,14 @@ nav {
   width: 250px;
   height: 300px;
 }
+
+#slideshow {
+  display: inline-block;
+  position: relative;
+  left: 26px;
+  font-size: 20px;
+  top: -50px;
+  background-color: wheat;
+  font-family: 'Great Vibes', Arial;
+  float: left;
+}
