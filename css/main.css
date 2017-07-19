@@ -618,3 +618,10 @@ nav {
   font-family: 'Great Vibes', Arial;
   float: left;
 }
+#slideshow span:first-of-type {
+  display: inline-block;
+  background-image: url("../images/inne/slide.ico");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
