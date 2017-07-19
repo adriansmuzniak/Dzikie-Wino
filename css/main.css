@@ -618,10 +618,12 @@ nav {
   padding-top: 5px;
   font-family: 'Great Vibes', Arial;
   float: left;
-  border-radius: 25%;
-  box-shadow: 2px 4px 10px darkred;
+  border-radius: 25px;
+  box-shadow: 1px 4px 10px orangered;
   background-color: floralwhite;
-  
+  letter-spacing: 1px;
+  color: #47000E;
+  border: 1px solid indianred;
 }
 
 #slideshow:hover {
@@ -636,7 +638,7 @@ nav {
   display: inline-block;
   width: 50px;
   height: 42px;
-  background-image: url("../images/inne/slide.ico");
+  background-image: url("../images/inne/slide.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
