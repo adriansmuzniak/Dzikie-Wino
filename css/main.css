@@ -624,6 +624,12 @@ nav {
   letter-spacing: 1px;
   color: #47000E;
   border: 1px solid indianred;
+  animation: hoops 2s infinite alternate ease;
+}
+
+@keyframes hoops {
+  0% {transform: scale(0.95);}
+  100% {transform: scale(1);}
 }
 
 #slideshow:hover {
@@ -632,6 +638,10 @@ nav {
 
 #slideshow span:first-of-type {
   display: inline-block;
+  position: relative;
+  left: 7px;
+  padding-bottom: 3px;
+  transition: 0.5s;
 }
 
 #slideshow span:last-of-type {
