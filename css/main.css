@@ -613,15 +613,23 @@ nav {
   position: relative;
   left: 26px;
   top: -50px;
+  width: 200px;
   font-size: 20px;
+  padding-top: 5px;
   font-family: 'Great Vibes', Arial;
   float: left;
   border-radius: 25%;
-  box-shadow: 2px 4px 10px red;
+  box-shadow: 2px 4px 10px darkred;
+  background-color: floralwhite;
+  
 }
+
+#slideshow:hover {
+  cursor: pointer;
+}
+
 #slideshow span:first-of-type {
   display: inline-block;
-
 }
 
 #slideshow span:last-of-type {
